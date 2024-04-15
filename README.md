@@ -1,0 +1,1 @@
+Shows random images of the beautiful Kamakura.
