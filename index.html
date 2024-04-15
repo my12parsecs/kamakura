@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beauty of Kamakura</title>
+  <style>
+    body{
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #image-container {
+      /* max-width: 800px; */
+      width: 90%;
+      height: 90%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        /* object-fit: cover; */
+        object-fit: contain;
+        margin: 0;
+        padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="image-container">
+    <img id="slideshow-image" src="" alt="Random Image">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
