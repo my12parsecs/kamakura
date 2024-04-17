@@ -16,7 +16,14 @@ const imageUrls = {
     const imageKeys = Object.keys(imageUrls);
     const randomIndex = Math.floor(Math.random() * imageKeys.length);
     const randomImageUrl = imageUrls[imageKeys[randomIndex]];
-    imageContainer.src = randomImageUrl;
+
+    imageContainer.style.opacity = 0;
+      
+    setTimeout(() => {
+      imageContainer.src = randomImageUrl;
+      
+      imageContainer.style.opacity = 1;
+    }, 500);
   }
 
   window.addEventListener('DOMContentLoaded', showRandomImage);
