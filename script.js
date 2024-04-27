@@ -13,7 +13,10 @@ const imageContainer = document.getElementById('slideshow-image');
 let currentImageUrl = null;
 let previousImageUrl = null;
 
+
+
 function showRandomImage() {
+  console.log("RANDOM IMAGE");
   const imageKeys = Object.keys(imageUrls);
   let randomIndex;
 
@@ -41,8 +44,6 @@ function showRandomImage() {
         imageContainer.classList.add('visible');
         newImage.remove();
       }
-      console.log(randomImageUrl);
-      console.log(document.querySelector(".image-link"));
       document.querySelector('.image-link').href = randomImageUrl;
       // document.querySelector('.image-link').innerText = randomImageUrl;
     });
@@ -50,7 +51,10 @@ function showRandomImage() {
     previousImageUrl = currentImageUrl;
     currentImageUrl = randomImageUrl;
   }
+  console.log("END");
 }
 
+
+
 window.addEventListener('DOMContentLoaded', showRandomImage);
-setInterval(showRandomImage, 5000);
+setInterval(showRandomImage, 2000);

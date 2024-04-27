@@ -15,13 +15,13 @@
       background-color: black;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
     }
 
     #image-container {
       width: 90%;
-      height: 90%;
+      height: 85%;
       margin: 0;
       padding: 0;
       overflow: hidden;
@@ -50,6 +50,7 @@
       width: 100vw;
       display: flex;
       justify-content: space-between;
+      margin-bottom: 0;
     }
     .info-container-left{
       max-width: 200px;
@@ -123,6 +124,7 @@
   </style>
 </head>
 <body>
+  <div class="top-container"></div>
   <div id="image-container">
     <img id="slideshow-image" src="" alt="Random Image">
   </div>
