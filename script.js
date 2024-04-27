@@ -44,7 +44,7 @@ function showRandomImage() {
       console.log(randomImageUrl);
       console.log(document.querySelector(".image-link"));
       document.querySelector('.image-link').href = randomImageUrl;
-      document.querySelector('.image-link').innerText = randomImageUrl;
+      // document.querySelector('.image-link').innerText = randomImageUrl;
     });
 
     previousImageUrl = currentImageUrl;
