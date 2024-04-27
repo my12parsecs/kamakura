@@ -5,7 +5,14 @@ const imageUrls = {
   3: 'https://fs.tour.ne.jp/index.php/file_manage/view/?contents_code=curation&file_name=308/22413/1f7de001d6008d167d3750ea354fba7a.jpg',
   4: 'https://upload.wikimedia.org/wikipedia/commons/f/fb/Gokurakuji_Station_%2801%29_IMG_9763-1_20190513.jpg',
   5: 'https://s3.ap-northeast-1.amazonaws.com/bukkenmatome.nxin.jp/life/images/20211202174018/pixta_74421993_M-2000x1334.jpg',
-  6: 'https://dm9p0p2npaqik.cloudfront.net/spots/890812/8943596/6588109/4.webp',
+  // 6: 'https://dm9p0p2npaqik.cloudfront.net/spots/890812/8943596/6588109/4.webp',
+  6: "https://ak-d.tripcdn.com/images/100112000000sfr3fB521.jpg?proc=source%2Ftrip",
+  7: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Zeniaraibenzaiten_Ugafuku-Shrine_01.jpg",
+  8: "https://r-studio-kamakura.jp/wp-content/uploads/2021/03/IMG_0088.jpg",
+  9: "https://www.enoden.co.jp/corporate/ehagaki/images/ehagaki-main1.jpg",
+  10: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Enoden_Hase_Series300.jpg",
+  11: "https://pbs.twimg.com/media/FIZceKyaAAIEL31?format=jpg&name=4096x4096",
+  12: "https://www.unhcr.org/jp/wp-content/uploads/sites/34/2023/06/03-1-scaled.jpg"
 };
 
 const imageContainer = document.getElementById('slideshow-image');
