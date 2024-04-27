@@ -57,4 +57,4 @@ function showRandomImage() {
 
 
 window.addEventListener('DOMContentLoaded', showRandomImage);
-setInterval(showRandomImage, 2000);
+setInterval(showRandomImage, 4500);
