@@ -12,7 +12,9 @@ const imageUrls = {
   9: "https://www.enoden.co.jp/corporate/ehagaki/images/ehagaki-main1.jpg",
   10: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Enoden_Hase_Series300.jpg",
   11: "https://pbs.twimg.com/media/FIZceKyaAAIEL31?format=jpg&name=4096x4096",
-  12: "https://www.unhcr.org/jp/wp-content/uploads/sites/34/2023/06/03-1-scaled.jpg"
+  12: "https://www.unhcr.org/jp/wp-content/uploads/sites/34/2023/06/03-1-scaled.jpg",
+  13: "https://images.microcms-assets.io/assets/14d13bd618dc45c7b684223c0ca9d033/767d955f5c224b61b5c609a2b90118d0/cj-wang-rYF-prmrzws-unsplash.jpg",
+  14: "https://media.timeout.com/images/105728908/image.jpg"
 };
 
 const imageContainer = document.getElementById('slideshow-image');
