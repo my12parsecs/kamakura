@@ -79,12 +79,15 @@ function showRandomImage() {
     newImage.src = randomImageUrl;
 
     newImage.onload = () => {
+      // Ensure the previous image is completely hidden before changing the source
       imageContainer.classList.remove('visible');
       setTimeout(() => {
         imageContainer.src = newImage.src;
-        imageContainer.classList.add('visible');
-        document.querySelector('.image-link').href = randomImageUrl;
-      }, 500); // Adjust timeout to match CSS transition
+        setTimeout(() => {
+          imageContainer.classList.add('visible');
+          document.querySelector('.image-link').href = randomImageUrl;
+        }, 100); // Short delay to ensure the class change has taken effect
+      }, 500); // Match this timeout to your CSS transition duration
     };
 
     previousImageUrl = currentImageUrl;
