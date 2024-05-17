@@ -24,45 +24,74 @@ let previousImageUrl = null;
 
 
 
+// function showRandomImage() {
+//   console.log("RANDOM IMAGE");
+//   const imageKeys = Object.keys(imageUrls);
+//   let randomIndex;
+
+//   do {
+//     randomIndex = Math.floor(Math.random() * imageKeys.length);
+//   } while (imageUrls[imageKeys[randomIndex]] === previousImageUrl);
+
+//   const randomImageUrl = imageUrls[imageKeys[randomIndex]];
+
+//   if (randomImageUrl !== currentImageUrl) {
+//     const newImage = new Image();
+//     newImage.src = randomImageUrl;
+//     newImage.classList.add('visible');
+
+//     newImage.addEventListener('load', () => {
+//       if (imageContainer.src) {
+//         imageContainer.classList.remove('visible');
+//         setTimeout(() => {
+//           imageContainer.src = newImage.src;
+//           imageContainer.classList.add('visible');
+//           newImage.remove();
+//         }, 500);
+//       } else {
+//         imageContainer.src = newImage.src;
+//         imageContainer.classList.add('visible');
+//         newImage.remove();
+//       }
+//       document.querySelector('.image-link').href = randomImageUrl;
+//       // document.querySelector('.image-link').innerText = randomImageUrl;
+//     });
+
+//     previousImageUrl = currentImageUrl;
+//     currentImageUrl = randomImageUrl;
+//   }
+//   console.log("END");
+// }
+
 function showRandomImage() {
   console.log("RANDOM IMAGE");
   const imageKeys = Object.keys(imageUrls);
   let randomIndex;
+  let randomImageUrl;
 
   do {
     randomIndex = Math.floor(Math.random() * imageKeys.length);
-  } while (imageUrls[imageKeys[randomIndex]] === previousImageUrl);
-
-  const randomImageUrl = imageUrls[imageKeys[randomIndex]];
+    randomImageUrl = imageUrls[imageKeys[randomIndex]];
+  } while (randomImageUrl === currentImageUrl || randomImageUrl === previousImageUrl);
 
   if (randomImageUrl !== currentImageUrl) {
     const newImage = new Image();
     newImage.src = randomImageUrl;
-    newImage.classList.add('visible');
 
-    newImage.addEventListener('load', () => {
-      if (imageContainer.src) {
-        imageContainer.classList.remove('visible');
-        setTimeout(() => {
-          imageContainer.src = newImage.src;
-          imageContainer.classList.add('visible');
-          newImage.remove();
-        }, 500);
-      } else {
+    newImage.onload = () => {
+      imageContainer.classList.remove('visible');
+      setTimeout(() => {
         imageContainer.src = newImage.src;
         imageContainer.classList.add('visible');
-        newImage.remove();
-      }
-      document.querySelector('.image-link').href = randomImageUrl;
-      // document.querySelector('.image-link').innerText = randomImageUrl;
-    });
+        document.querySelector('.image-link').href = randomImageUrl;
+      }, 500); // Adjust timeout to match CSS transition
+    };
 
     previousImageUrl = currentImageUrl;
     currentImageUrl = randomImageUrl;
   }
   console.log("END");
 }
-
 
 
 window.addEventListener('DOMContentLoaded', showRandomImage);
